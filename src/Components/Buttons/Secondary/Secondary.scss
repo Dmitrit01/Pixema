@@ -1,0 +1,22 @@
+.secondary{
+    min-height: 56px;
+    width: 100%;
+    background: #323537;
+    border-radius: 10px;
+    color:#fff;
+    transition: all 0.3s;
+    cursor: pointer;
+    border:none;
+    &:hover{
+       color:#AFB2B6;
+    }
+}
+
+.disabled{
+    background: #80858B;
+    color:#AFB2B6;
+    cursor:not-allowed;
+    &:hover{
+        background: #80858B;
+    }
+}
