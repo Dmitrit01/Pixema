@@ -1,11 +1,13 @@
 .sign-up{
     width: 574px;
-    
     background: #242426;
     padding: 40px;
     border-radius: 10px;
     @media screen and (max-width:480px){
         padding: 24px;
+    }
+    &--light{
+        background: white;
     }
     &__box{
         display: flex;

@@ -7,10 +7,17 @@ interface IBoardOneFilm {
     titleMovie:string
     from:number
     to:number
+    id?:string;
 }
-
+interface IFilm {
+    Poster:string
+    Title:string
+    Type:string
+    Year:string
+    imdbID:string
+}
 export const BoardOneFilm: FC<IBoardOneFilm> = ({titleMovie,from,to}) => {
-    const[movie,setMovie] = useState([])
+    const[movie,setMovie] = useState< IFilm[] | []>([])
    
     useEffect(()=>{
        const fetchMovie = async() =>{
@@ -18,12 +25,14 @@ export const BoardOneFilm: FC<IBoardOneFilm> = ({titleMovie,from,to}) => {
                 const response = await fetch(URL)
                 const Data = await response.json()
                 const finalData = Data.Search
-                setMovie(finalData)
                 console.log(finalData)
+                setMovie(finalData)
         }
         fetchMovie()
     },[titleMovie])
     const oneFilm = movie.slice(from,to)
+   
+    
     return (
         <div className='board-one-film'>
             {movie && oneFilm.map((item)=>
@@ -31,6 +40,7 @@ export const BoardOneFilm: FC<IBoardOneFilm> = ({titleMovie,from,to}) => {
                     image={item['Poster']} 
                     titleFilm={item['Title']} 
                     yearFilm={item['Year']}
+                    id={item['imdbID']}
                 />
             )}
         </div>

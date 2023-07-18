@@ -1,7 +1,7 @@
 import { FC,useEffect,useState } from 'react';
-import { Card } from '../Card/Card';
-import { BASE_URL } from '../../api/url';
-import { BoardFilms } from '../BoardFilms/BoardFilms';
+import { Card } from '../../Card/Card';
+import { BASE_URL } from '../../../api/url';
+import { BoardFilms } from '../../BoardFilms/BoardFilms';
 import './CardList.scss';
 
 interface ICardList {

@@ -1,4 +1,5 @@
-import { IMovie } from "../Components/MovieFull/MovieFull";
+
+import { IMovie } from "../Components/Pages/MovieFull/MovieFull";
 import { API_KEY, BASE_URL } from "./url";
 
 export const getMovieId = async (id: string): Promise<IMovie | null> => {

@@ -4,7 +4,7 @@ import { AppProvider } from './Context/AppContext';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
 import './index.scss';
-import { store } from './Components/ReduxStore/favorities/reducer';
+import { store } from './ReduxStore/favorities/reducer';
 import { Provider } from 'react-redux';
 
 

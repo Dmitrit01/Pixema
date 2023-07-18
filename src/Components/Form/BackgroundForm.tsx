@@ -6,6 +6,7 @@ import { SignUp } from './SignUp/SignUp';
 import { NewPassword } from './NewPassword/NewPassword';
 import './BackgroundForm.scss';
 import { ResetPassword } from './ResetPassword/ResetPassword';
+import { Link, Route, Routes } from 'react-router-dom';
 
 interface IBackgroundForm {
 
@@ -15,12 +16,14 @@ export const Form: FC<IBackgroundForm> = () => {
     
     return (
         <div className='form-background'  >
-            <div className="form-background__logo"><Logo/></div>
-            <NewPassword/>
-            {/* <ResetPassword/> */}
-            {/* <SignUp/> */}
-            {/* <SignIn/> */}
-            <footer className='form-background__footer'>© All Rights Reserved</footer>
+            <Link to={'/Home'}><div className="form-background__logo"><Logo/></div></Link>
+            <Routes>
+                <Route path='sign-in' element={<SignIn/>}/>
+                <Route path='sign-up' element={<SignUp/>}/>
+                <Route path='new-password' element={<NewPassword/>}/>
+                <Route path='reset-password' element={<ResetPassword/>} />
+            </Routes>
+        <footer className='form-background__footer'>© All Rights Reserved</footer>
         </div>
     )
 };

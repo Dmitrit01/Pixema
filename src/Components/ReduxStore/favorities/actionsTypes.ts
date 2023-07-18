@@ -1,1 +1,0 @@
-export const ADD_FAVORITE_MOVIE = 'ADD_FAVORITE_MOVIE'

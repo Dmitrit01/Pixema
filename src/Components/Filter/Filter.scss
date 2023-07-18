@@ -18,6 +18,9 @@
         background: #242426;
         height: 100%;
         padding: 54px 40px 0px 40px;
+        &--light{
+            background: white;
+        }
     }
     &__close-box{
         display: flex;
@@ -47,6 +50,14 @@
             height: 2px;
             transform: rotate(45deg);
             background: white;
+        }
+        &--light{
+            span:nth-child(1){
+                background: black;
+            }
+            span:nth-child(2){
+                background: black;
+            }
         }
     }
     &__active{

@@ -1,12 +1,13 @@
-import { FC, useEffect, useState } from 'react';
+import { FC, useState } from 'react';
 import { Header } from '../Header/Header';
-import { CardList } from '../CardList/CardList';
+import { CardList } from '../Pages/CardList/CardList';
 import { Settings } from '../Pages/Settings/Settings';
 import { Route, Routes,Navigate } from 'react-router-dom';
-import { Triends } from '../Triends/Triends';
-import { Favorities } from '../../Favorities/Favorities';
-import { MovieFull } from '../MovieFull/MovieFull';
+import { Triends } from '../Pages/Triends/Triends';
+import { Favorities } from '../Pages/Favorities/Favorities';
+import { MovieFull } from '../Pages/MovieFull/MovieFull';
 import './Main.scss';
+
 
 interface IMain {
     handleMoveMain: () => void
@@ -14,7 +15,6 @@ interface IMain {
     isOpen: boolean;
     moveMain: boolean;
 }
-
 
 export const Main: FC<IMain> = ({ handleMoveMain, handleFilterMovie, isOpen, moveMain }) => {
     const [titleMovie, setTitleMovie] = useState('')

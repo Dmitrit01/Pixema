@@ -1,6 +1,6 @@
 import { FC,useState,useEffect } from 'react';
-import { BASE_URL } from '../../api/url';
-import { Card } from '../Card/Card';
+import { BASE_URL } from '../../../api/url';
+import { Card } from '../../Card/Card';
 import './TriendMovie.scss';
 
 interface ITriendMovie {

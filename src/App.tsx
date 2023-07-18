@@ -1,8 +1,9 @@
 import { PageTemplate } from './Components/Pages/PageTemplate/PageTemplate';
 
-// import { Form } from './Components/Form/BackgroundForm';
+import { Form } from './Components/Form/BackgroundForm';
 import './App.scss';
 import { useAppContext } from './Context/AppContext';
+import { Route, Routes } from 'react-router-dom';
 
 
 function App() {
@@ -10,8 +11,10 @@ function App() {
    const button = `app ${isDarkTheme() && 'dark'}`
    return (
      <div className = {button} >
-         <PageTemplate/>
-        {/* <Form/> */}
+         <Routes>
+            <Route path='/*' element={<PageTemplate/>}/>
+            <Route path='/form/*' element={<Form/>}/>
+         </Routes>
      </div>
   );
 }

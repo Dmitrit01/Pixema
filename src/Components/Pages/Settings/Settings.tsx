@@ -1,4 +1,4 @@
-import { FC} from 'react';
+import { FC, useState} from 'react';
 import { Options } from './Options/Options';
 import { Input } from '../../Form/Input/Input';
 import { ToggleTheme } from './ToggleTheme/ToggleTheme';
@@ -8,31 +8,82 @@ import { Secondary } from '../../Buttons/Secondary/Secondary';
 import { useAppContext } from '../../../Context/AppContext';
 import './Settings.scss';
 
-
 interface ISettings {
 
 }
 
 export const Settings: FC<ISettings> = () => {
     const{isDarkTheme}=useAppContext()
+    const [name,setName] = useState<string>('')
+    const [email,setEmail] = useState<string>('')
+    const [password,setPassword] = useState<string>('')
+    const [newPassword,setNewPassword] = useState<string>('')
+    const [confirmPassword,setConfirmPassword] = useState<string>('')
+
+    const handleName = (newValue:string)=>{
+        setName(newValue)
+    }
+    const handleEmail = (newValue:string)=>{
+        setEmail(newValue)
+    }
+    const handlePassword = (newValue:string)=>{
+        setPassword(newValue)
+    }
+    const handleNewPassword = (newValue:string)=>{
+        setNewPassword(newValue)
+    }
+    const handleConfirmPassword = (newValue:string)=>{
+        setEmail(newValue)
+    }
+
     return (
         <div className='settings'>
             <div className="settings__box">
                 <Options title='Profile'>
                     <div className="options__box-left">
-                        <Input title='Name' placeholder='value' type='text'/>  
+                        <Input 
+                            title='Name' 
+                            placeholder='value'
+                            type='text'
+                            handleChange={handleName}
+                            value={name}
+                        />  
                    </div>
                     <div className="options__box-rigth">
-                        <Input title='Email' placeholder='value' type='text'/>
+                        <Input 
+                            title='Email' 
+                            placeholder='value' 
+                            type='text'
+                            handleChange={handleEmail}
+                            value={email}
+                        />
                     </div>
                 </Options>
                 <Options title='Password'>
                     <div className="options__box-left">
-                        <Input title='Password' placeholder='Your password' type='text'/>  
+                        <Input 
+                            title='Password' 
+                            placeholder='Your password' 
+                            type='text'
+                            handleChange={handlePassword}
+                            value={password}
+                        />  
                     </div>
                     <div className="options__box-rigth">
-                        <Input title='New password' placeholder='New password' type='text'/>
-                        <Input title='Confirm password' placeholder='Confirm password' type='text'/>
+                        <Input 
+                            title='New password' 
+                            placeholder='New password' 
+                            type='text'
+                            handleChange={handleNewPassword}
+                            value={newPassword}
+                        />
+                        <Input 
+                            title='Confirm password' 
+                            placeholder='Confirm password' 
+                            type='text'
+                            handleChange={handleConfirmPassword}
+                            value={confirmPassword}
+                        />
                     </div>
                 </Options>
                 <Options title='Color mode' theme>

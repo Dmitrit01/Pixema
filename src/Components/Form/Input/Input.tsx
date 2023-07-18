@@ -7,6 +7,8 @@ interface IInput {
     title:string;
     placeholder:string;
     type:string;
+    handleChange: (newValue: string) => void;
+    value?:string;
     isDisabled?:boolean;
     isError?:boolean;
     isFocus?:boolean;
@@ -18,7 +20,9 @@ export const Input: FC<IInput> = ({
     type,
     isDisabled=false,
     isError=false,
-    isFocus=false
+    isFocus=false,
+    handleChange,
+    value
 }) => {
     const{isDarkTheme}=useAppContext()
     const inputClass = `box-input__input 
@@ -45,6 +49,8 @@ export const Input: FC<IInput> = ({
                 className = {inputClass}
                 placeholder={placeholder}
                 disabled = {isDisabled}
+                onChange={(e) => handleChange(e.target.value)}
+                value={value}
             />
             {isError && <p className='error-text'>Error text</p>}
        </div>
