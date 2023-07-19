@@ -7,10 +7,6 @@ import './index.scss';
 import { store } from './ReduxStore/favorities/reducer';
 import { Provider } from 'react-redux';
 
-
-
-
-
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );

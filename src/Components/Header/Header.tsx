@@ -10,7 +10,7 @@ import { isDisabled } from '@testing-library/user-event/dist/utils';
 interface IHeader {
     handleMoveMain:()=>void;
     handleFilterMovie:()=>void
-    titleFilm:any;
+    titleFilm:(value:string)=>void;
     isOpen:boolean;
     moveMain:boolean
 }

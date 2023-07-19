@@ -34,7 +34,7 @@ export const Input: FC<IInput> = ({
         if(inputRef.current && isFocus){
             inputRef.current.focus()
         }
-    },[])
+    },[isFocus])
     
     return (
        <div className='box-input'>
