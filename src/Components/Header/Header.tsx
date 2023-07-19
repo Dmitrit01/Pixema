@@ -4,7 +4,7 @@ import { UserInfo } from '../UserInfo/UserInfo';
 import { Burger } from '../Burger/Burger';
 import { Logo } from '../Logo/Logo';
 import './Header.scss';
-import { isDisabled } from '@testing-library/user-event/dist/utils';
+
 
 
 interface IHeader {

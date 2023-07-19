@@ -16,18 +16,18 @@ export const BoardFilms: FC<IBoardFilms> = () => {
         <>
             <div className='board-films'>
                 <div className="board-films__header">
-                    <BoardOneFilm titleMovie={'UNDISPUTED'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Wrong Turn'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Spartacus'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Survival Island'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Magnificent Century'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Resident Evil'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Interny'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Saw'} from={1} to={2}/>
-                    <BoardOneFilm titleMovie={'More Ants in the Pants'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Mortal'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'Glukhar'} from={0} to={1}/>
-                    <BoardOneFilm titleMovie={'South Park'} from={0} to={1}/>
+                    <BoardOneFilm titleMovie='UNDISPUTED' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Wrong Turn' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Spartacus' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Survival Island' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Magnificent Century' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Resident Evil' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Interny' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Saw' from={1} to={2}/>
+                    <BoardOneFilm titleMovie='More Ants in the Pants' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Mortal' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='Glukhar' from={0} to={1}/>
+                    <BoardOneFilm titleMovie='South Park' from={0} to={1}/>
                 </div>
                 <div className="board-films__footer">
                     {!isOpen && 
