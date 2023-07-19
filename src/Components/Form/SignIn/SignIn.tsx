@@ -15,10 +15,10 @@ export const SignIn: FC<ISignIn> = () => {
     const [email,setEmail] = useState<string>('')
     const [password,setPassword] = useState<string>('')
     const handleEmail = (newValue:string)=>{
-        setEmail(newValue)
+        setEmail(newValue.trim())
     }
     const handlePassword = (newValue:string)=>{
-        setPassword(newValue)
+        setPassword(newValue.trim())
     }
    
     return (

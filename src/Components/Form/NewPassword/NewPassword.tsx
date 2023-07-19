@@ -15,10 +15,10 @@ export const NewPassword: FC<INewPassword> = () => {
     const [confirmPassword,setConfirmPassword] = useState('')
 
     const handlePassword = (newValue:string)=>{
-        setPassword(newValue)
+        setPassword(newValue.trim())
     }
     const handleConfirmPassword = (newValue:string)=>{
-        setConfirmPassword(newValue)
+        setConfirmPassword(newValue.trim())
     }
 
     return (

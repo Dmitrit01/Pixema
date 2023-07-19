@@ -1,4 +1,4 @@
-import { FC, useEffect,useState } from 'react';
+import { FC} from 'react';
 import Rating  from '../../assets/rating/Path.png';
 import { useAppContext } from '../../Context/AppContext';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ import './Card.scss';
 import { MovieState } from '../../ReduxStore/favorities/interfaces';
 
 import { useSelector } from 'react-redux';
-import { getMovieId } from '../../api/getMovie';
+
 
 interface ICard {
     image:string;

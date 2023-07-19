@@ -13,7 +13,7 @@ export const ResetPassword: FC<IResetPassword> = () => {
     
     const [email,setEmail] = useState<string>('')
     const handleEmail = (newValue:string)=>{
-        setEmail(newValue)
+        setEmail(newValue.trim())
     }
 
     return (

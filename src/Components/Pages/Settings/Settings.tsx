@@ -21,19 +21,19 @@ export const Settings: FC<ISettings> = () => {
     const [confirmPassword,setConfirmPassword] = useState<string>('')
 
     const handleName = (newValue:string)=>{
-        setName(newValue)
+        setName(newValue.trim())
     }
     const handleEmail = (newValue:string)=>{
-        setEmail(newValue)
+        setEmail(newValue.trim())
     }
     const handlePassword = (newValue:string)=>{
-        setPassword(newValue)
+        setPassword(newValue.trim())
     }
     const handleNewPassword = (newValue:string)=>{
-        setNewPassword(newValue)
+        setNewPassword(newValue.trim())
     }
     const handleConfirmPassword = (newValue:string)=>{
-        setEmail(newValue)
+        setConfirmPassword(newValue.trim())
     }
 
     return (
