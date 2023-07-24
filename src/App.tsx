@@ -1,10 +1,8 @@
 import { PageTemplate } from './Components/Pages/PageTemplate/PageTemplate';
-
 import { Form } from './Components/Form/BackgroundForm';
 import './App.scss';
 import { useAppContext } from './Context/AppContext';
 import { Route, Routes } from 'react-router-dom';
-
 
 function App() {
    const{isDarkTheme}=useAppContext();
